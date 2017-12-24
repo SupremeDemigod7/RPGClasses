@@ -433,7 +433,7 @@ namespace RPG
                     }
                     player.AddBuff(BuffType("ActiveCooldown"), 180);
                 }
-                else if (mplayer.voidwalker)
+                else if (mplayer.voidFlker)
                 {
                     int cost = 15 + 20 * mplayer.special2;
                     if (player.statMana < cost) { return; }
@@ -475,7 +475,7 @@ namespace RPG
                     player.manaRegenDelay = 90;
                     mplayer.special2++;
                     player.AddBuff(BuffType("ActiveCooldown"), 480 - mplayer.specialProgressionCount * 30);
-                    player.AddBuff(BuffID.ChaosState, 600);
+RPG.cs                    player.AddBuff(BuffID.ChaosState, 600);
                     mplayer.specialTimer = 600;
                     if(mplayer.special2 > 3)
                     {
